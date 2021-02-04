@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>01 - Форма</title>
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic-ext"
+		rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&amp;subset=cyrillic-ext"
+		rel="stylesheet" />
+</head>
+
+<body class="radial-bg flex-center">
+	<!-- white-plate -->
+	<div class="white-plate white-plate--payment">
+		<div class="container-fluid">
+			<!-- header -->
+			<div class="white-plate__header text-center">
+				<p class="white-plate__logo"><span>Форма</span> заявок</p>
+			</div>
+			<!-- // header -->
+
+			<div class="white-plate__line-between white-plate__line-between--main"></div>
+
+			<form id="requestForm">
+				<label>Ваши данные:</label>
+				<div class="form-group">
+					<input id="formName" type="text" name="name" autocomplete="on" class="form-control"
+						placeholder="Имя и Фамилия" required />
+				</div>
+				<div class="form-group">
+					<input id="formPhone" type="text" name="phone" autocomplete="on" class="form-control"
+						placeholder="Телефон" />
+				</div>
+				<div class="form-group">
+					<input id="formEmail" type="email" name="email" autocomplete="on" class="form-control"
+						placeholder="Email" required />
+				</div>
+				<div class="form-group">
+					<label for="exampleFormControlSelect1">Продукт:</label>
+					<select name="product" class="form-control" data-form-elem="product-list" id="productSelect">
+						<option value="course-html">Курс по верстке</option>
+						<option value="course-js">Курс по JavaScript</option>
+						<option value="course-vue">Курс по VUE JS</option>
+						<option value="course-php">Курс по PHP</option>
+						<option value="course-wordpress">Курс по WordPress</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-lg btn-primary btn-block">
+						Оформить заявку
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- // white-plate -->
+
+	<script src="js/model.js"></script>
+	<script src="js/form.view.js"></script>
+	<script src="js/form.controller.js"></script>
+	<script src="js/test-data.js"></script>
+</body>
+
+</html>

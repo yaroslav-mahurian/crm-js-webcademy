@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>03 - Редактировать заявку</title>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic-ext"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic-ext"
+        rel="stylesheet" />
+</head>
+
+<body class="body--dashboard">
+    <!-- left-panel -->
+    <div class="left-panel blue-skin">
+        <!-- Logo -->
+        <div class="left-panel__logo">
+            <div class="left-panel__logo-title">CRM заявки</div>
+            <div class="left-panel__logo-subtitle">
+                учебный проект webcademy
+            </div>
+        </div>
+        <!-- // Logo -->
+        <!-- User -->
+        <div class="left-panel__user clearfix">
+            <div class="left-panel__user-photo">
+                <img src="img/avatars/avatar-128.jpg" alt="Avatar" />
+            </div>
+            <div class="left-panel__user-name">Петр <br />Васильевич</div>
+        </div>
+        <!-- // User -->
+        <!-- Navigation 1 -->
+        <div class="left-panel__navigation">
+            <div class="left-panel__navigation-title">
+                Заявки
+            </div>
+            <ul>
+                <li><a href="02-crm-all-bids.html" data-status="all">Все вместе</a></li>
+                <li><a href="02-crm-all-bids.html" data-status="new">Новые</a></li>
+                <li><a href="02-crm-all-bids.html" data-status="inWork">В работе</a></li>
+                <li><a href="02-crm-all-bids.html" data-status="complete">Завершенные</a></li>
+                <li><a href="02-crm-all-bids.html" data-status="archive">Архив</a></li>
+            </ul>
+        </div>
+        <!-- // Navigation 1 -->
+        <!-- Navigation 2 -->
+        <div class="left-panel__navigation">
+            <div class="left-panel__navigation-title">
+                Продукты
+            </div>
+            <ul>
+                <li><a href="#">Активные</a></li>
+                <li><a href="#">Архив</a></li>
+            </ul>
+        </div>
+        <!-- // Navigation 2 -->
+        <!-- Navigation 3 -->
+        <div class="left-panel__navigation left-panel__navigation--no-line">
+            <ul>
+                <li><a href="#">Выход</a></li>
+            </ul>
+        </div>
+        <!-- // Navigation 3 -->
+    </div>
+    <!-- // left-panel -->
+
+    <!-- main-wrapper -->
+    <div class="main-wrapper">
+        <div class="container-fluid">
+            <!-- row -->
+            <div class="row justify-content-between align-items-center">
+                <div class="col">
+                    <div class="admin-heading-1">Работа с заявкой</div>
+                </div>
+                <div class="col text-right">
+                    <a href="02-crm-all-bids.html" class="btn btn-link">Вернуться назад</a>
+                </div>
+            </div>
+            <!-- // row -->
+            <!-- row -->
+            <div class="row">
+                <!-- col -->
+                <div class="col">
+                    <form action="">
+                        <!-- card -->
+                        <div class="card mb-4">
+                            <div class="card-header">Данные о заявке</div>
+                            <div class="card-body" data-card>
+                                <div class="row mb-3">
+                                    <div class="col-md-2">
+                                        <strong>ID:</strong>
+                                    </div>
+                                    <div class="col" data-id></div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-2">
+                                        <strong>Дата создания:</strong>
+                                    </div>
+                                    <div class="col" data-date>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-2">
+                                        <strong>Продукт:</strong>
+                                    </div>
+                                    <div class="col">
+                                        <select class="custom-select" data-form-elem="product-list">
+                                            <option value="course-html">Курс по верстке</option>
+                                            <option value="course-js">Курс по JavaScript</option>
+                                            <option value="course-vue">Курс по VUE JS</option>
+                                            <option value="course-php">Курс по PHP</option>
+                                            <option value="course-wordpress">Курс по WordPress</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-2">
+                                        <strong>Имя:</strong>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control"
+                                        placeholder="Имя"
+                                        data-form-elem="name"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-2">
+                                        <strong>Email:</strong>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control"
+                                        data-form-elem="email"
+                                        placeholder="john.doe@gmail.com"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-2">
+                                        <strong>Телефон:</strong>
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" data-form-elem="phone"
+                                        placeholder="+38 (0XX)-XXX-XX-XX" />
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-2">
+                                        <strong>Статус заявки:</strong>
+                                    </div>
+                                    <div class="col">
+                                        <select class="custom-select"  data-form-elem="status-list">
+                                            <option selected value="default">Выберите...</option>
+                                            <option value="new">Новая</option>
+                                            <option value="inWork">В работе</option>
+                                            <option value="expectedPayment">Ожидается оплата</option>
+                                            <option value="complete">Завершена</option>
+                                            <option value="failure">Отказ</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //card -->
+                        <div class="row justify-content-between">
+                            <div class="col">
+                                <a href="02-crm-all-bids.html" type="button" class="btn btn-primary" data-btn-save>Сохранить
+                                    изменения</a>
+                            </div>
+                            <div class="col text-right">
+                                <a href="02-crm-all-bids.html" type="button" class="btn btn-dark"
+                                data-btn-delete>Удалить в архив</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- //col -->
+            </div>
+            <!-- //row -->
+        </div>
+    </div>
+    <!-- // main-wrapper -->
+
+    <script src="js/model.js"></script>
+    <script src="js/table.view.js"></script>
+    <script src="js/edit.view.js"></script>
+    <script src="js/edit.controller.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>02 - Все заявки</title>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic-ext"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic-ext"
+        rel="stylesheet" />
+</head>
+
+<body class="body--dashboard">
+    <!-- left-panel -->
+    <div class="left-panel blue-skin">
+        <!-- Logo -->
+        <div class="left-panel__logo">
+            <div class="left-panel__logo-title">CRM заявки</div>
+            <div class="left-panel__logo-subtitle">учебный проект webcademy</div>
+        </div>
+        <!-- // Logo -->
+        <!-- User -->
+        <div class="left-panel__user clearfix">
+            <div class="left-panel__user-photo">
+                <img src="img/avatars/avatar-128.jpg" alt="Avatar" />
+            </div>
+            <div class="left-panel__user-name">Петр <br />Васильевич</div>
+        </div>
+        <!-- // User -->
+        <!-- Navigation 1 -->
+        <div class="left-panel__navigation">
+            <div class="left-panel__navigation-title">Заявки</div>
+            <ul id="linkFilter">
+                <li><a href="#" data-status="all">Все вместе</a></li>
+                <li><a href="#" data-status="new">Новые</a></li>
+                <li><a href="#" data-status="inWork">В работе</a></li>
+                <li><a href="#" data-status="complete">Завершенные</a></li>
+                <li><a href="#" data-status="archive">Архив</a></li>
+            </ul>
+        </div>
+        <!-- // Navigation 1 -->
+        <!-- Navigation 2 -->
+        <div class="left-panel__navigation">
+            <div class="left-panel__navigation-title">Продукты</div>
+            <ul>
+                <li><a href="#">Активные</a></li>
+                <li><a href="#">Архив</a></li>
+            </ul>
+        </div>
+        <!-- // Navigation 2 -->
+        <!-- Navigation 3 -->
+        <div class="left-panel__navigation left-panel__navigation--no-line">
+            <ul>
+                <li><a href="#">Выход</a></li>
+            </ul>
+        </div>
+        <!-- // Navigation 3 -->
+    </div>
+    <!-- // left-panel -->
+
+    <!-- main-wrapper -->
+    <div class="main-wrapper">
+        <div class="container-fluid">
+            <div class="admin-heading-1">Все заявки</div>
+
+            <form action="">
+                <!-- <div class="form-row"> -->
+                <div class="row mb-3 justify-content-start">
+                    <!-- Col -->
+                    <div class="col">
+                        <div class="btn-group" role="group" aria-label="..." id="statusFilter">
+                            <a href="#" data-status="all" class="btn btn-light">Все</a>
+                            <a href="#" data-status="new" class="btn btn-light">Новые</a>
+                            <a href="#" data-status="inWork" class="btn btn-light">В работе</a>
+                            <a href="#" data-status="complete" class="btn btn-light">Завершенные</a>
+                            <a href="#" data-status="archive" class="btn btn-light">Архив</a>
+                        </div>
+                    </div>
+                    <!-- // Col -->
+                    <!-- Col -->
+                    <div class="col">
+                        <select class="custom-select" id="productFilter">
+                            <option selected value="all">Все продукты</option>
+                            <option value="course-html">Курс по верстке</option>
+                            <option value="course-js">Курс по JavaScript</option>
+                            <option value="course-vue">Курс по VUE JS</option>
+                            <option value="course-php">Курс по PHP</option>
+                            <option value="course-wordpress">Курс по WordPress</option>
+                        </select>
+                    </div>
+                    <!-- // Col -->
+                </div>
+            </form>
+
+            <table class="table fs-14">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>дата</th>
+                        <th>продукт</th>
+                        <th>имя</th>
+                        <th>email</th>
+                        <th>телефон</th>
+                        <th>статус</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="RequestsListTable">
+                    <!-- <tr>
+                        <th scope="row">1</th>
+                        <td>01.04.2020</td>
+                        <td>Курс по верстке</td>
+                        <td>Петр Сергеевич</td>
+                        <td>info@inbox.ru</td>
+                        <td>+7 (909) 77-55-777</td>
+                        <td>
+                            <div class="badge badge-pill badge-danger">
+                                Новый
+                            </div>
+                        </td>
+                        <td>
+                            <a href="03-crm-edit-bid.html">Редактировать</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>01.04.2020</td>
+                        <td>Курс по верстке</td>
+                        <td>Василий Петрович</td>
+                        <td>info@gmail.ru</td>
+                        <td>+7 (909) 77-55-777</td>
+                        <td>
+                            <div class="badge badge-pill badge-warning">
+                                В работе
+                            </div>
+                        </td>
+                        <td>
+                            <a href="03-crm-edit-bid.html">Редактировать</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>01.04.2020</td>
+                        <td>Курс по верстке</td>
+                        <td>Николай Владимирович</td>
+                        <td>info@mail.ru</td>
+                        <td>+7 (909) 77-55-777</td>
+                        <td>
+                            <div class="badge badge-pill badge-success">
+                                Завершенный
+                            </div>
+                        </td>
+                        <td>
+                            <a href="03-crm-edit-bid.html">Редактировать</a>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- // main-wrapper -->
+
+    <script src="js/model.js"></script>
+    <script src="js/table.view.js"></script>
+    <script src="js/table.controller.js"></script>
+</body>
+
+</html>
